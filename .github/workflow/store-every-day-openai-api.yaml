@@ -1,0 +1,17 @@
+name: openai every day backup
+run-name:  openai every day backup
+on:
+  schedule:
+    - cron: '0 0 * * *'
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: ./download.sh
+      - run: git config --global user.email "xshalk@163.com"
+      - run: git config --global user.name "shalk"
+      - run: git add .
+      - run: git commit --message "update openai api yaml"
+      - run: git push
+
