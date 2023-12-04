@@ -14,7 +14,8 @@ jobs:
         run: |
           git config --global user.email "xshalk@163.com"
           git config --global user.name "shalk"
-          git commit -a --message "update openai api yaml"
+          git add .
+          git commit --message "update openai api yaml"
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
