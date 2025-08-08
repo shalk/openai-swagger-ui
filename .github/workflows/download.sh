@@ -6,7 +6,7 @@ cd "$(dirname "$0")" && cd ../../
 
 date_format=$(date +%Y-%m-%d)
 dir="history/$date_format"
-url="https://raw.githubusercontent.com/openai/openai-openapi/master/openapi.yaml"
+url="https://app.stainless.com/api/spec/documented/openai/openapi.documented.yml"
 newurl="https://shalk.github.io/openai-swagger-ui/$dir/openapi.yaml"
 
 mkdir -p "$dir"
